@@ -11,10 +11,13 @@ module outer_box(){
 		cube([3,4,1]);
 }
 
-%outer_box();
-
-color("blue")
-	translate([-1,1,1]){
-		cube([12,4,1]);
-		cube([1,4,2]);
+module inner_slide(){
+	color("blue")
+		translate([-1,1,1]){
+			cube([12,4,1]);
+			cube([1,4,2]);
 	}
+}
+
+%outer_box();
+inner_slide();
