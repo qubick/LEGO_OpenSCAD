@@ -6,15 +6,26 @@ module inner(){
 
 module box(){
 	difference(){
-		cube([10,6,3]);
+		cube([10,4,3]);
 
 		translate([1,-1,1])
 			inner();
 	}
+	
+	translate([5,1,0])
+		cylinder(r=0.5, h=3, $fn=50);
+}
+
+module roller(){
+	difference(){
+		color("red")
+			translate([5,1,1])
+			cylinder(h=0.5, r=3.5, $fn=50);
+
+		translate([5,1,1])
+			cylinder(r=0.7, h=1, $fn=50);
+	}
 }
 
 % box();
-
-color("red")
-	translate([5,4,1])
-		cylinder(h=0.5, r=3.5, $fn=50);
+roller();
