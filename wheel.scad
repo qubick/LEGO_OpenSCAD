@@ -29,7 +29,7 @@ module roller(){
 
 module vex(){
 	translate([5, 1, 1.5])
-		for( i = [0 : 5] ){
+		for( i = [0:5] ){
 
 			rotate(i*360/6, [0,0,1])
 			translate([0, 3, 0])
