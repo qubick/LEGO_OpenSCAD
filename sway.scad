@@ -18,6 +18,6 @@ module sway(){
 }
 
 base();
-rotate([0,0,-30]) //can adjust
-translate([-1.5,5,1.5])
+translate([1,5,1.5])
+	rotate([0,0,50]) //can adjust
 	%sway();
