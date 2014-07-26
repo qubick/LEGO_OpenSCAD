@@ -1,6 +1,6 @@
 module block_long() { //long block
 	difference(){
-		cube([6.6, 3, 1]);
+		cube([6.6, 3, 0.5]);
 		
 		translate([-1,0,0])
 			rotate([0,270,180])
@@ -8,11 +8,11 @@ module block_long() { //long block
 	}
 }
 
-module block_short() { //long block
+module block_short() { //short block
 	difference(){
-		cube([6.1,3,1]);
+		cube([6.3, 3, 0.5]);
 		
-		translate([-1,0,0])
+		translate([-0.5,0,0])
 			rotate([0,270,180])
 			cylinder(h=8, r=1, $fn=50);
 	}
@@ -26,8 +26,8 @@ module cylinder_bottom(){
 			cylinder(h=8, r=0.7, $fn=50);
 	}
 
-	translate([-.1, .1, .1])
-	rotate([0,270,180])
+	translate([-.2, .1, 0])
+	rotate([0,270, 170])
 		block_short();
 }
 
@@ -36,7 +36,7 @@ module cylinder_top(){
 	translate([0,0,3])
 		cylinder(h=3, r=1, $fn=50);
 	translate([0,0,-.4]) //innder dowel
-		cylinder(h=6.4, r=.5, $fn=50);
+		cylinder(h=6.4, r=.4, $fn=50);
 
 	translate([0, 0, 6])
 		rotate([0,90,0])
@@ -46,10 +46,12 @@ module cylinder_top(){
 	cylinder(h=.2, r=1, $fn=50);
 }
 
-color("blue")
-translate([0,-.2,-0.3])
-	rotate([0,0, -50])
-	cylinder_bottom();
+//intersection(){
+	color("blue")
+		cylinder_top();
 
+	translate([0,-.2,-0.3])
+		rotate([0,0, -50])
+		cylinder_bottom();
+//}
 
-%cylinder_top();
