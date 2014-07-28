@@ -1,11 +1,11 @@
 module cow() {
 	//http://www.thingiverse.com/thing:281678
-	import("/Users/qubick/Downloads/Cow-simple.stl");
+	import("component-thingiverse/Cow-simple.stl");
 }
 
 module moon() {
 	//http://www.thingiverse.com/thing:333648
-	import("/Users/qubick/Downloads/moon.stl");	
+	import("component-thingiverse/moon.stl");	
 }
 
 translate([-90,0,-10])
