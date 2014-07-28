@@ -9,7 +9,7 @@ module moon() {
 }
 
 translate([-90,0,-10])
-cube([250,3,150]);
+cube([250,1,150]);
 
 //half-cow
 difference(){
@@ -21,6 +21,6 @@ difference(){
 
 }
 
-translate([-40,5,90])
+translate([-40,3,90])
 rotate([90,50,0])
 moon();
