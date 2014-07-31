@@ -1,5 +1,6 @@
 module mouse(){
 	//http://www.thingiverse.com/thing:61909
+	scale([1,1,0.6])
 	import("component-thingiverse/Mouse.stl");
 }
 
@@ -12,9 +13,6 @@ module toyhouse(){
 	}
 }
 
-
-
-
 //base
 cube([200,1,120]);
 
@@ -24,11 +22,11 @@ rotate([90,30,0])
 mouse();
 
 
-translate([100, -10, 50])
+translate([100, -5, 50])
 rotate([90, 0, 180])
 difference(){
 	toyhouse();
 
-	translate([-20, -50, 10])
+	translate([-20, -50, 5])
 		cube([100, 100, 100]);
 }
