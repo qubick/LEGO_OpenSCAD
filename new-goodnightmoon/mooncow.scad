@@ -23,6 +23,6 @@ difference(){
 
 }
 
-translate([-40,3,90])
+translate([-40, 2,90])
 rotate([90,50,0])
 moon();
