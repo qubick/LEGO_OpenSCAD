@@ -1,12 +1,12 @@
-module cow() {
+module cow(factor) {
 	//http://www.thingiverse.com/thing:281678
-	scale([1,0.5,1])
+	scale([1*factor ,0.5*factor ,1*factor])
 	import("component-thingiverse/Cow-simple.stl");
 }
 
-module moon() {
+module moon(factor) {
 	//http://www.thingiverse.com/thing:333648
-	scale([1,1,0.5])
+	scale([1*factor, 1*factor ,0.5*factor])
 	import("component-thingiverse/moon.stl");	
 }
 
@@ -17,7 +17,7 @@ cube([250,1,150]);
 difference(){
 	translate([60, -5,5])
 	rotate([0,0,15])
-	cow();
+	cow(0.7);
 
 	cube([150, 30, 100]);
 
@@ -25,4 +25,4 @@ difference(){
 
 translate([-40, 2,90])
 rotate([90,50,0])
-moon();
+moon(0.5);
