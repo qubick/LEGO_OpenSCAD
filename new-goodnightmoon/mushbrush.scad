@@ -1,7 +1,7 @@
 
 module comb(factor){
 	//http://www.thingiverse.com/thing:1140
-	scale([1*factor, 1*factor, 1*factor])
+	scale([1*factor, 1*factor, 1.5*factor])
 	import("component-thingiverse/comb.stl");
 }
 
@@ -11,15 +11,14 @@ module brush(factor){
 }
 
 module bowl(factor){
-	//http://www.thingiverse.com/thing:100196
-	scale([0.5*factor, 0.5*factor, 0.2*factor])
-	import("component-thingiverse/SaladierCuldePoule200.stl");
+	//http://www.thingiverse.com/thing:32081
+	scale([2*factor, 2*factor, 1*factor])
+	import("component-thingiverse/Bowl.stl");
 
 	//http://www.thingiverse.com/thing:328387
-	rotate([20, 0, 0]) translate([0, 40, 2])
+	rotate([15, 0, 0]) translate([0, 60, 2])
 	scale([1*factor, 1*factor, 1*factor])
 	import("component-thingiverse/spoon.stl");
-
 }
 
 //base
@@ -30,5 +29,5 @@ rotate([0, 0, 30])
 comb(1.2);
 //brush();
 
-translate([70, 200, 2])
+translate([70, 180, 0])
 bowl(1);
