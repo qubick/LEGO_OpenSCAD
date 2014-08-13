@@ -16,7 +16,7 @@ module bowl(factor){
 	import("component-thingiverse/Bowl.stl");
 
 	//http://www.thingiverse.com/thing:328387
-	rotate([15, 0, 0]) translate([0, 60, 2])
+	rotate([15, 0, 0]) translate([0, 60, 5])
 	scale([1*factor, 1*factor, 1*factor])
 	import("component-thingiverse/spoon.stl");
 }
