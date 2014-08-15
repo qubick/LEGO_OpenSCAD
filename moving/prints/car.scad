@@ -2,7 +2,7 @@ use <wheel-v2.scad>;
 
 module wheel(factor){
 	
-	scale([factor, factor, factor*2]){
+	scale([factor, factor, factor*1.8]){
 		box();
 		roller();
 	}
@@ -24,9 +24,9 @@ difference(){
 }
 
 //front wheel
-translate([7, 11, 8]) rotate([0, 90, 0])
+translate([9.5, 11, 8]) rotate([0, 90, 0])
 	wheel(1.2);
 
 //back wheel
-translate([7, 39, 8]) rotate([0, 90, 0])
+translate([9.5, 39, 8]) rotate([0, 90, 0])
 	wheel(1.2);
