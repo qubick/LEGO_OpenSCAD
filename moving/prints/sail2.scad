@@ -5,6 +5,7 @@ translate([0,-.2,-0.3])
  	rotate([0,0, -50])
  	cylinder_bottom();
 
+//http://www.thingiverse.com/thing:85978
 module ship(factor){
 	scale([factor, factor, factor])
 	import("component/Base.stl");
