@@ -7,8 +7,13 @@ translate([0,-.2,-0.3])
 
 //http://www.thingiverse.com/thing:85978
 module ship(factor){
-	scale([factor, factor, factor])
-	import("component/Base.stl");
+	difference(){
+		scale([factor, factor, factor])
+		import("component/Base.stl");
+
+		translate([0, -20, -5])
+		cube([10, 40, 20]);
+	}
 }
 
 module dowel(factor){
@@ -32,11 +37,16 @@ module sail(factor){
 	}
 }
 
-translate([8, -2,0]) rotate([270,0,0])
+//base
+translate([-30, -18, -30]) rotate([0,0,-60])
+	cube([1, 80, 60]);
+
+
+translate([8, -2.5, 0]) rotate([270,0,0])
 	dowel(0.5);
 
 translate([0.5, 9, 0]) rotate([270,0,90])
 	sail(0.5);
 
-translate([-1,5,-30])
-ship(0.5);
+translate([4.5, 1, -28]) rotate([0,0,-60])
+	ship(0.5);
