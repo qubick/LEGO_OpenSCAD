@@ -21,7 +21,7 @@ module inner(){
  module roller(){
  	difference(){
  		color("red")
- 			translate([5,1,0.7])
+ 			translate([5,1,0.9])
  			cylinder(r=3.5, h=1.5, $fn=50);
  
  		translate([5,1,1])
