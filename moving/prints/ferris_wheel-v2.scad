@@ -53,7 +53,7 @@ module ferris(factor){
 
 }
 
-translate([120, 24, 28])
+translate([111, 22, 18])
 difference(){
 	ferris(2.5);
 
@@ -67,7 +67,7 @@ difference(){
 translate([-5, -120, -8])
 	cube([200, 300, 2]);
 
-wheel(12);
+wheel(11);
 
 //translate([30, 85, 37]) rotate([180, 0, 0])
 //	frame(1);
