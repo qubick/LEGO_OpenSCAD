@@ -27,7 +27,7 @@ math_hinge();
 //translate([0,1,-3]) rotate([90, 0, 90])
 	//USA(4);
 
-rotate([0, 0, 40]) translate([0, -67, 0]) 
+rotate([0, 0, 40]) translate([3, -67, 0]) 
 waving(1);
 
 //dowel
