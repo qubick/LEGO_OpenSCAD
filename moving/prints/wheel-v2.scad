@@ -1,7 +1,7 @@
 module inner(){
- 	translate([1,0.5,0])
- 		cube([6,7,2]);
- 	cube([8,6.5,2]);
+ 	translate([-.5,0,0])
+ 		cube([8,8,2]);
+ 	cube([9,7,2]);
  }
  
  module box(){
