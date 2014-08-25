@@ -22,7 +22,7 @@ module inner(){
  	difference(){
  		color("red")
  			translate([5,1,0.9])
- 			cylinder(r=3.5, h=1.5, $fn=50);
+ 			cylinder(r=3.5, h=0.8, $fn=50);
  
  		translate([5,1,1])
  			cylinder(r=0.7, h=3, $fn=50);
