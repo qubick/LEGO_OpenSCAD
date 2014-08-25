@@ -1,4 +1,6 @@
-use <hinge-02.scad>
+use <hinge-02.scad>;
+use <mathhinge.scad>;
+
 module hinge(){
 	cylinder_top();
 	translate([0,-.2,-0.3]) rotate([0,0, -50])
@@ -11,20 +13,26 @@ module USA(factor){
 	import("component/USA_FLAG.stl");
 }
 
-module waving(){
-//http://www.thingiverse.com/thing:72753
-
+module waving(factor){
+	//http://www.thingiverse.com/thing:72753
+	scale([factor, factor, factor])
+	import("component/flagscaled.stl");
 }
 
-hinge();
+//hinge();
+translate([52, 13, 100]) rotate([0, 90, 0]) scale([1.5, 1.5, 1.5])
+math_hinge();
 
-translate([0,1,-3]) rotate([90, 0, 90])
-	USA(4);
+
+//translate([0,1,-3]) rotate([90, 0, 90])
+	//USA(4);
+
+rotate([0, 0, 40]) translate([0, -67, 0]) 
+waving(1);
 
 //dowel
-translate([-3, -3, -20]) rotate([0, 0, 30])
-cube([2, 2, 30]);
+translate([50, 0, 10])
+cube([7, 7, 130]);
 
 //base page
-translate([-22, 30, -23]) rotate([0, 0, -60])
-cube([60, 1, 40]);
+cube([300, 1, 200]);
