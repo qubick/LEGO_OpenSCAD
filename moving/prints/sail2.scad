@@ -30,16 +30,16 @@ module dowel(factor){
 
 module sail(factor){
 	difference(){
-		scale([factor, factor, factor*2])
+		scale([factor, factor, factor*3])
 		import("component/Sail.stl");
 		
 		translate([-37, -3, 2]) rotate([90, 0, 0])
 		color("red")
-		cube([10, 20, 250], center=true);
+		cube([10, 40, 250], center=true);
 	}
 }
 
-translate([12, 25, 30]) rotate([0, 90, 90]) scale([1.5, 1.5, 1.5])
+translate([12, 25, 30]) rotate([0, 90, 90]) scale([2, 2, 2])
 	math_hinge();
 
 //base
@@ -48,7 +48,7 @@ cube([1, 300, 200], center=true);
 translate([41, 30, 0]) rotate([90, 0, 0])
 	dowel(2);
 
-translate([49, 25, 0]) rotate([270, 0, 0])
+translate([51, 25, 0]) rotate([270, 0, 0])
 	sail(2);
 
 translate([0, 0, -80]) 
