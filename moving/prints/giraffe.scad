@@ -5,7 +5,7 @@ module giraffe(factor){
 
 	difference(){
 		scale([factor*0.6, factor, factor])
-		import("component/Giraffe_t.stl");
+		//import("component/Giraffe_t.stl");
 
 		translate([0, -50, -10]) cube([10, 100, 100]);
 	}
@@ -31,6 +31,7 @@ giraffe(1);
 translate([0, -60, -10])
 cube([1, 150, 100]);
 
+//translate([-50, 30, 0]) rotate([0, 0, -90])
 fence();
 
 translate([-5, 40, 40]) rotate([90, 90, 0])
