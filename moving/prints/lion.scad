@@ -3,7 +3,7 @@ use <mathhinge.scad>;
 module lion(factor){
 	difference(){
 		scale([factor*0.6, factor, factor])
-		import("component/Lion_t.stl");
+		import("component/Dog_t.stl");
 
 		translate([0, -50, -10]) cube([10, 100, 100]);
 	}
