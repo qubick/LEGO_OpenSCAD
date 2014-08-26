@@ -9,7 +9,7 @@ module hinge(){
 
 module USA(factor){
 	//http://www.thingiverse.com/thing:10273
-	scale([factor, factor*1.2, factor*0.8])
+	scale([factor, factor*1.2, factor*2])
 	import("component/USA_FLAG.stl");
 }
 
@@ -20,11 +20,11 @@ module waving(factor){
 }
 
 //hinge();
-translate([52, 13, 100]) rotate([0, 90, 0]) scale([1.5, 1.5, 1.5])
+translate([52, 15, 120]) rotate([0, 90, 0]) scale([2, 2, 2])
 math_hinge();
 
 
-translate([54, 15, 50]) rotate([90, 0, 90])
+translate([52, 17, 70]) rotate([90, 0, 90])
 	USA(20);
 
 //rotate([0, 0, 40]) translate([3, -67, 0]) 
