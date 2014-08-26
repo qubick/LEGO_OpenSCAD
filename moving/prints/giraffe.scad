@@ -4,10 +4,15 @@ use <mathhinge.scad>;
 module giraffe(factor){
 
 	difference(){
-		scale([factor*0.6, factor, factor])
+		//http://www.thingiverse.com/thing:364969
+		scale([factor*0.7, factor, factor])
+		import("component/giraffe.stl");
+		
+		//giraffe from yahoo
 		//import("component/Giraffe_t.stl");
 
-		translate([0, -50, -10]) cube([10, 100, 100]);
+		translate([0, -30, -50]) 
+			cube([10, 100, 100]);
 	}
 }
 
@@ -25,7 +30,9 @@ module fence(){
 		cube([1, 65, 10]);
 }
 
-giraffe(1);
+translate([0, 0, 20]) rotate([90, 0, 0])
+giraffe(10);
+
 
 //base
 translate([0, -60, -10])
