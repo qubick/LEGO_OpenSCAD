@@ -3,17 +3,18 @@ use <fence.scad>;
 
 module camel(factor){
 	difference(){
-		scale([factor*0.6, factor, factor])
+		scale([factor*0.5, factor, factor])
 		import("component/Camel.stl");
 		translate([0, -50, -10]) cube([200, 200, 200]);
 	}
 }
 
-camel(0.7);
-
-translate([0, -70, -10])
+//base
+union(){
+	translate([0, -70, -10])
 		cube([1, 150, 100]);
-
+	camel(0.7);
+}
 
 //right door
 translate([2, 25, -5]) scale([1, .5, 1.2])
