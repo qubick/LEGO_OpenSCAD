@@ -1,4 +1,5 @@
 use <mathhinge.scad>;
+use <fence.scad>;
 
 module elephant(factor){
 
@@ -10,25 +11,11 @@ module elephant(factor){
 	}
 }
 
-module fence(){
-
-	for(i= [0:6])
-	{
-		translate([-15, 50-16*i, 5])
-			cube([2, 15, 70]);
-	}
-	translate([-16, -45, 60])
-		cube([1, 110, 10]);
-
-	translate([-16, -45, 10])
-		cube([1, 110, 10]);
-}
-
 //base
 translate([0, -60, -10])
 	cube([1, 150, 100]);
 
-translate([-75, 50, 0]) rotate([0, 0, -90])
+translate([-75, 45, 0]) rotate([0, 0, -90])
 	fence();
 elephant(1.2);
 
