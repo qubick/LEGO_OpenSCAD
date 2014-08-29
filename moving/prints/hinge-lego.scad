@@ -1,0 +1,3 @@
+use <mathhinge.scad>;
+
+hinge();
