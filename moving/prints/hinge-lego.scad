@@ -6,8 +6,8 @@ translate([1, -10, 0]) math_hinge();
 
 module box(){
 	difference(){
-		cube([22, 4, 4]);
-		translate([1, -1, .5]) cube([20, 4, 3]);
+		cube([22, 4, 5]);
+		translate([.5, -1, .5]) cube([21, 4, 4]);
 	}
 }
 
