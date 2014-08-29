@@ -13,7 +13,7 @@ module ship(factor){
 		scale([factor*0.7, factor, factor])
 		import("component/Base.stl");
 
-		translate([-105, -80, 0])
+		translate([-100, -80, 0])
 		cube([100, 200, 100]);
 	}
 }
@@ -39,16 +39,16 @@ module sail(factor){
 	}
 }
 
-translate([12, 25, 30]) rotate([0, 90, 90]) scale([2, 2, 2])
+translate([0, 36, 30]) rotate([0, 90, 0]) scale([2, 2, 2])
 	math_hinge();
 
 //base
-cube([1, 300, 200], center=true);
+//cube([1, 300, 200], center=true);
 
 translate([41, 30, 0]) rotate([90, 0, 0])
 	dowel(2);
 
-translate([51, 25, 0]) rotate([270, 0, 0])
+translate([6, 75, 0]) rotate([270, 0, 90])
 	sail(2);
 
 translate([0, 0, -80]) 
