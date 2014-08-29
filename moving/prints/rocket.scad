@@ -1,4 +1,5 @@
 use <hinge-lego.scad>;
+use <Flames.scad>;
 
 module rocket(factor){
 	//http://www.thingiverse.com/thing:12872
@@ -27,7 +28,9 @@ module cloud(factor){
 module flame(factor){
 	//http://www.thingiverse.com/thing:7948
 	scale([factor, factor, factor])
-	import("component/flames.stl");
+//	import("component/flames.stl");
+
+	scale([0.5,0.5,0.005]) image_MakeALot();
 }
 
 
@@ -35,12 +38,16 @@ translate([2, 45, -35]) rotate([90, 170, 270])
 	cloud(1);
 translate([0, 35, 0]) rotate([90, 0, 90])
 	hinge();
+/*
+translate([2, 35, -15]) rotate([0, 90, 0]) 
+	flame(.7);
+*/
 
-translate([3, 46, -30]) rotate([0, 90, 0]) flame(.7);
 
 //base plate
 cube([1, 80, 60]);
-	translate([5, 30, 1]) rotate([0, 0, 90]) box();
+translate([2, 40, 3]) rotate([90, 0, 90]) 
+	box();
 
 translate([0, 40, 40]) rotate([90, 0, 90])
 	rocket(1);
