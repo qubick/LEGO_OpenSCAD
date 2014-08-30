@@ -1,4 +1,4 @@
-use <mathhinge.scad>;
+use <hinge-lego.scad>;
 /*
 use <hinge-02.scad>;
 cylinder_top();
@@ -10,7 +10,7 @@ translate([0, -.2, -.3])
 
 module ship(factor){
 	difference(){
-		scale([factor*0.7, factor, factor])
+		scale([factor*0.8, factor, factor])
 		import("component/Base.stl");
 
 		translate([-100, -80, 0])
@@ -39,17 +39,24 @@ module sail(factor){
 	}
 }
 
-translate([0, 36, 30]) rotate([0, 90, 0]) scale([2, 2, 2])
-	math_hinge();
+
 
 //base
-//cube([1, 300, 200], center=true);
+cube([1, 250, 200], center=true);
 
 translate([41, 30, 0]) rotate([90, 0, 0])
 	dowel(2);
 
-translate([6, 75, 0]) rotate([270, 0, 90])
-	sail(2);
-
 translate([0, 0, -80]) 
 	ship(2);
+
+translate([9, 27, 19]) rotate([0, 90, 0]) scale([2, 2, 2])
+	box();
+
+
+translate([6, 180, 0]) rotate([270, 0, 90])
+	sail(2);
+
+translate([0, 160, 30]) rotate([0, 90, 0]) scale([2, 2, 2])
+	hinge();
+
