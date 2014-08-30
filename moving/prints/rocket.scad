@@ -38,10 +38,10 @@ translate([2, 45, -35]) rotate([90, 170, 270])
 	cloud(1);
 translate([0, 35, 0]) rotate([90, 0, 90])
 	hinge();
-/*
-translate([2, 35, -15]) rotate([0, 90, 0]) 
+
+translate([2, 36, -15]) rotate([0, 90, 0]) 
 	flame(.7);
-*/
+
 
 
 //base plate
