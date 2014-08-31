@@ -21,14 +21,14 @@ module inner_slide(){
  	color("blue")
  		translate([1, 1.1, 1.2]){
  			cube([11, 3.8, 0.7]);
- 			cube([1, 3.8, 1.2]);
+ 			cube([1, 3.8, .7]);
 			translate([10, 0, -.2]) cube([1, 3.8, 1.2]);
  	}
  }
  
 module pulley(){
 	outer_box();
-	translate([0, 0, 0])
+	translate([5, 0, 0])
 		inner_slide();
 }
 module  straw(){
