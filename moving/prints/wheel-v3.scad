@@ -28,32 +28,22 @@ module roller(){
  			cylinder(r=0.7, h=3, $fn=50);
  	}
 }
- 
-module vex(){
- 	translate([5, 1, 1.5])
- 		for( i = [0:5] ){
- 
- 			rotate(i*360/6, [0,0,1])
- 			translate([0, 3, 0])
- 			cylinder(r=0.4, h=0.5, $fn=50);
- 	}
-}
- 
+
 module axes(){
-	cylinder($fn=50, r=1, h=1);
+	cylinder($fn=50, r=1, h=.5);
 
 	difference(){
 		//innder dowel
 		union(){
-			cylinder($fn=50, r=0.5, h=3);
-			translate([0,0,3]) sphere($fn=50, r=0.6);
+			cylinder($fn=50, r=0.4, h=3);
+			translate([0, 0, 3]) sphere($fn=50, r=0.7);
 		}
-		translate([-.6, - .1, 1]) cube([2, .2 ,6]);
+		translate([-.6, - .1, .5]) cube([2, .2 ,6]);
 	}
 	
 }
 
 axes();
  //box();
-roller();
+translate([-5, -1, .5]) roller();
  //vex();
