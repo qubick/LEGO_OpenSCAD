@@ -21,7 +21,7 @@ module box(){
 module roller(){
  	difference(){
  		color("red")
- 			translate([5,1,0.9])
+ 			translate([5,1,0.5])
  			cylinder(r=3.5, h=0.8, $fn=50);
  
  		translate([5,1,0])
@@ -38,7 +38,7 @@ module axes(){
 			cylinder($fn=50, r=0.4, h=3);
 			translate([0, 0, 3]) sphere($fn=50, r=0.7);
 		}
-		translate([-.6, - .1, .5]) cube([2, .2 ,6]);
+		translate([-1, - .1, .5]) cube([3, .2 ,6]);
 	}
 	
 }
