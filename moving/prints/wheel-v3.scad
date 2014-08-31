@@ -21,15 +21,16 @@ module box(){
 module roller(){
  	difference(){
  		color("red")
- 			translate([5,1,0.5])
+ 			translate([5,1,0])
  			cylinder(r=3.5, h=0.8, $fn=50);
  
- 		translate([5,1,0])
+ 		translate([5,1,-.5])
  			cylinder(r=0.7, h=3, $fn=50);
  	}
 }
 
 module axes(){
+
 	cylinder($fn=50, r=1, h=.5);
 
 	difference(){
@@ -45,5 +46,6 @@ module axes(){
 
 axes();
  //box();
-translate([-5, -1, .5]) roller();
+//translate([-5, -1, .5]) 
+roller();
  //vex();
